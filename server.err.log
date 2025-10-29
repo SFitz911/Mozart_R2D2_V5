@@ -1,0 +1,8 @@
+2025-10-29 02:33:05,136 INFO deepseek_gradio Loading DeepSeek Coder model...
+2025-10-29 02:33:05,137 ERROR deepseek_gradio Failed to load model: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './models/deepseek-coder-1.3b-instruct'. Use `repo_type` argument if needed.
+2025-10-29 02:33:05,417 INFO deepseek_gradio Starting Gradio app on 0.0.0.0:8080 with share=True
+2025-10-29 02:33:06,286 INFO httpx HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-10-29 02:33:08,865 INFO httpx HTTP Request: GET http://localhost:8080/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-10-29 02:33:11,721 INFO httpx HTTP Request: HEAD http://localhost:8080/ "HTTP/1.1 200 OK"
+2025-10-29 02:33:12,452 INFO httpx HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-10-29 02:33:13,101 INFO httpx HTTP Request: GET https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_windows_amd64.exe "HTTP/1.1 200 OK"
