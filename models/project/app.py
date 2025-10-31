@@ -13,9 +13,9 @@ logger = logging.getLogger("deepseek_gradio")
 # Load the model
 logger.info("Loading DeepSeek Coder model...")
 try:
-    model_path = "./deepseek-coder-1.3b-instruct"
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, repo_type="local")
-    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16, repo_type="local").to('cuda')
+    model_path = "../deepseek-coder-1.3b-instruct"
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16).to('cuda')
     logger.info(f"Model device after loading: {model.device}")
     logger.info(f"CUDA available: {torch.cuda.is_available()}")
     logger.info("Model loaded successfully.")

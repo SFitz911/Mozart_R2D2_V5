@@ -1,15 +1,24 @@
 #!/bin/bash
-# Activate your environment (edit this line if you use conda)
-source /workspace/venv/main/bin/activate
+# Clean, minimal DeepSeek Coder launch script
+cd "$(dirname "$0")/project"
 
-# Install all dependencies
-pip install -r /workspace/Mozart_R2D2/requirements.txt
+# Create venv if it doesn't exist
+if [ ! -d ".venv" ]; then
+	python3 -m venv .venv
+fi
 
-# Kill any process on port 8080
-fuser -k 8080/tcp || true
+# Activate venv
+source .venv/bin/activate
+
+# Upgrade pip and install requirements
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Kill any process on port 8090
+fuser -k 8090/tcp || true
 
 # Start the app
-nohup python /workspace/Mozart_R2D2/deploy/deepseek_source/app.py > /tmp/deepseek.log 2>&1 &
+nohup python app.py > /tmp/deepseek.log 2>&1 &
 
 # Print the Gradio link
 sleep 5
