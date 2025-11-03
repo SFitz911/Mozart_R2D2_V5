@@ -109,11 +109,11 @@ custom_css = """
     --border: #30363d;
     --text: #c9d1d9;
     --text-secondary: #8b949e;
-    --accent: #FFD700;
+    --accent: #58a6ff;
     --success: #3fb950;
     --warning: #d29922;
     --error: #f85149;
-    --yellow-text: #FFD700;
+    --yellow-text: #58a6ff;
 }
 
 * {
@@ -147,14 +147,14 @@ body {
 
 .message.user {
     background-color: #1a3a52 !important;
-    color: var(--yellow-text) !important;
+    color: var(--accent) !important;
     margin-left: auto !important;
     max-width: 80% !important;
 }
 
 .message.bot {
     background-color: var(--tertiary) !important;
-    color: var(--yellow-text) !important;
+    color: var(--accent) !important;
     border: 1px solid var(--border) !important;
     max-width: 80% !important;
 }
@@ -193,7 +193,7 @@ textarea {
 textarea:focus {
     border-color: var(--accent) !important;
     outline: none !important;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
 }
 
 /* Buttons */
@@ -208,12 +208,12 @@ button {
 }
 
 button:hover {
-    background-color: #FFF44F !important;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+    background-color: #79c0ff !important;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5) !important;
 }
 
 button:active {
-    background-color: #FFD700 !important;
+    background-color: #58a6ff !important;
 }
 
 /* Labels */
@@ -250,11 +250,11 @@ def chat_interface(message: str, history: List[Tuple[str, str]]) -> str:
 with gr.Blocks(css=custom_css, theme=gr.themes.Soft(primary_hue="blue")) as demo:
     gr.HTML("""
     <div style="text-align: center; margin-bottom: 20px;">
-        <h1 style="font-size: 2.5em; margin: 0; color: #FFD700;">🤖 Mozart R2D2 🤖</h1>
-        <p style="color: #FFD700; font-size: 1.1em; margin: 10px 0;">
+        <h1 style="font-size: 2.5em; margin: 0; color: #58a6ff;">🤖 Mozart R2D2 🤖</h1>
+        <p style="color: #58a6ff; font-size: 1.1em; margin: 10px 0;">
             Powered by DeepSeek Coder & OpenSource. Let's Go!
         </p>
-        <p style="color: #FFD700; font-size: 0.95em; margin: 10px 0;">
+        <p style="color: #58a6ff; font-size: 0.95em; margin: 10px 0;">
             🥝 Created by knowledge gained from New Zealand's best. Nextwork.org 🥝
         </p>
     </div>
