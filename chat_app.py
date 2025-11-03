@@ -255,7 +255,7 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Soft(primary_hue="blue")) as demo
             Powered by DeepSeek Coder & OpenSource. Let's Go!
         </p>
         <p style="color: #FFD700; font-size: 0.95em; margin: 10px 0;">
-            🥝 Created by knowledge gained from New Zealand's best. 🥝
+            🥝 Created by knowledge gained from New Zealand's best. Nextwork.org 🥝
         </p>
     </div>
     """)
