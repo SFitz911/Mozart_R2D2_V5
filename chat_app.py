@@ -109,10 +109,11 @@ custom_css = """
     --border: #30363d;
     --text: #c9d1d9;
     --text-secondary: #8b949e;
-    --accent: #58a6ff;
+    --accent: #FFD700;
     --success: #3fb950;
     --warning: #d29922;
     --error: #f85149;
+    --yellow-text: #FFD700;
 }
 
 * {
@@ -145,15 +146,15 @@ body {
 }
 
 .message.user {
-    background-color: var(--accent) !important;
-    color: var(--primary) !important;
+    background-color: #1a3a52 !important;
+    color: var(--yellow-text) !important;
     margin-left: auto !important;
     max-width: 80% !important;
 }
 
 .message.bot {
     background-color: var(--tertiary) !important;
-    color: var(--text) !important;
+    color: var(--yellow-text) !important;
     border: 1px solid var(--border) !important;
     max-width: 80% !important;
 }
@@ -192,13 +193,13 @@ textarea {
 textarea:focus {
     border-color: var(--accent) !important;
     outline: none !important;
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1) !important;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2) !important;
 }
 
 /* Buttons */
 button {
     background-color: var(--accent) !important;
-    color: var(--primary) !important;
+    color: #010409 !important;
     border: none !important;
     border-radius: 6px !important;
     padding: 8px 16px !important;
@@ -207,11 +208,12 @@ button {
 }
 
 button:hover {
-    background-color: #79c0ff !important;
+    background-color: #FFF44F !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
 }
 
 button:active {
-    background-color: #388bfd !important;
+    background-color: #FFD700 !important;
 }
 
 /* Labels */
