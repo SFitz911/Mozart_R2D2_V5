@@ -1,13 +1,30 @@
 # Ignore Python virtual environments
 .venv/
+venv/
+env/
 
 # Ignore model weights and Hugging Face repos
 models/deepseek-coder-1.3b-instruct/
 models/DeepSeek-Coder-1.3b-instruct/
 
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
 # Ignore logs
 *.log
+
+# Ignore Gradio generated files
+gradio_url.txt
 
 # Ignore system files
 .DS_Store
 Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
