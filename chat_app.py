@@ -21,7 +21,7 @@ logger = logging.getLogger("deepseek_chat")
 # Load the model
 logger.info("Loading DeepSeek Coder model...")
 try:
-    model_path = "models/deepseek-coder-1.3b-instruct"
+    model_path = "models/DeepSeek-Coder-1.3b-instruct"
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_path, 
@@ -127,7 +127,9 @@ body {
 
 .gradio-container {
     background-color: var(--primary) !important;
-    max-width: 900px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
 }
 
 /* Chat container */
@@ -290,23 +292,24 @@ with gr.Blocks(css=custom_css, theme=gr.themes.Soft(primary_hue="blue")) as demo
     # Chat interface
     chatbot = gr.Chatbot(
         label="Chat with DeepSeek Coder",
-        height=500,
+        height=600,
         show_label=True,
         container=True,
         type="tuples",
+        scale=1,
     )
     
-    with gr.Row():
+    with gr.Row(scale=1):
         message_input = gr.Textbox(
             label="Your Message",
             placeholder="Type your code generation request... (Press Enter to send)",
-            lines=2,
+            lines=3,
             show_label=False,
             scale=4,
         )
         send_button = gr.Button("Send", scale=1)
     
-    with gr.Row():
+    with gr.Row(scale=1):
         clear_button = gr.Button("🗑️ Clear Chat", scale=1)
         copy_button = gr.Button("📋 Copy Last Response", scale=1)
     
