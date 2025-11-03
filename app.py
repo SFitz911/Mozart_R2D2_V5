@@ -60,25 +60,6 @@ if __name__ == "__main__":
     try:
         port = find_open_port(7860, 9000)
         logger.info(f"Starting Gradio app on 0.0.0.0:{port} with share=True")
-        # Launch Gradio and capture the public URL
-        def url_callback(url: str):
-            logger.info(f"Gradio public URL: {url}")
-            try:
-                with open("gradio_url.txt", "w") as f:
-                    f.write(url.strip() + "\n")
-            except Exception as e:
-                logger.error(f"Failed to write Gradio URL to file: {e}")
-
-        # Launch and get the app object
-    app_obj = iface.launch(server_name="0.0.0.0", server_port=port, share=True)
-        # Fallback: try to write the share_url after launch if available
-        try:
-            share_url = getattr(app_obj, 'share_url', None)
-            if share_url:
-                with open("gradio_url.txt", "w") as f:
-                    f.write(share_url.strip() + "\n")
-                logger.info(f"Gradio public URL (fallback): {share_url}")
-        except Exception as e:
-            logger.error(f"Fallback failed to write Gradio URL: {e}")
+        iface.launch(server_name="0.0.0.0", server_port=port, share=True)
     except Exception as e:
         logger.error(f"Failed to launch Gradio app: {e}")
