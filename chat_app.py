@@ -250,9 +250,9 @@ def chat_interface(message: str, history: List[Tuple[str, str]]) -> str:
 with gr.Blocks(css=custom_css, theme=gr.themes.Soft(primary_hue="blue")) as demo:
     gr.HTML("""
     <div style="text-align: center; margin-bottom: 20px;">
-        <h1 style="font-size: 2.5em; margin: 0;">🤖 DeepSeek Coder Chat</h1>
-        <p style="color: #8b949e; font-size: 1.1em; margin: 10px 0;">
-            Cursor-inspired chat interface with advanced code generation
+        <h1 style="font-size: 2.5em; margin: 0; color: #FFD700;">🎵 Mozart R2D2</h1>
+        <p style="color: #FFD700; font-size: 1.1em; margin: 10px 0;">
+            Powered by DeepSeek Coder OpenSource 🎸 Oh Yeah!
         </p>
     </div>
     """)
